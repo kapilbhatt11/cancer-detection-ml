@@ -18,7 +18,10 @@ scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 
 # Train
-model = RandomForestClassifier(n_estimators=100, max_depth=6, random_state=42)
+# model = RandomForestClassifier(n_estimators=100, max_depth=6, random_state=42)
+# Naya — n_estimators badlo
+model = RandomForestClassifier(
+    n_estimators=200, max_depth=6, random_state=42)
 model.fit(X_train_scaled, y_train)
 
 # Save
